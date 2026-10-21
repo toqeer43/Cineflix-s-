@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#131315;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary": "#ffb4aa", "tertiary-container": "#996900", "error-container": "#93000a", "inverse-on-surface": "#313032", "outline": "#af8782", "surface-bright": "#39393b", "surface-container-highest": "#353437", "on-background": "#e5e1e4", "secondary-fixed": "#ffdad7", "secondary-container": "#a00216", "tertiary-fixed": "#ffdeae", "primary-fixed-dim": "#ffb4aa", "surface-variant": "#353437", "tertiary-fixed-dim": "#ffba3e", "on-tertiary-fixed-variant": "#604100", "on-tertiary-fixed": "#281900", "surface-container-low": "#1c1b1e", "primary-container": "#e50914", "on-secondary": "#68000a", "on-primary-container": "#fff7f6", "inverse-primary": "#c0000c", "primary-fixed": "#ffdad5", "background": "#131315", "surface": "#131315", "surface-container": "#201f22", "surface-dim": "#131315", "on-secondary-fixed": "#410004", "secondary": "#ffb3ad", "secondary-fixed-dim": "#ffb3ad", "surface-container-lowest": "#0e0e10", "on-error": "#690005", "on-primary-fixed-variant": "#930007", "on-secondary-fixed-variant": "#930012", "error": "#ffb4ab", "on-surface-variant": "#e9bcb6", "on-tertiary": "#432c00", "on-primary-fixed": "#410001", "tertiary": "#ffba3e", "on-secondary-container": "#ffa9a2", "outline-variant": "#5e3f3b", "surface-tint": "#ffb4aa", "on-tertiary-container": "#fff7f2", "on-surface": "#e5e1e4", "surface-container-high": "#2a2a2c", "inverse-surface": "#e5e1e4", "on-primary": "#690003", "on-error-container": "#ffdad6" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "space-sm": "0.5rem", "gutter": "1.5rem", "space-lg": "1.5rem", "space-2xl": "4rem", "space-xl": "2.5rem", "margin-mobile": "1rem", "margin-tv": "4rem", "gutter-tv": "2.5rem", "space-md": "1rem", "gutter-mobile": "0.75rem", "margin": "3rem" }, fontFamily: { "body-lg": ["Plus Jakarta Sans"], "headline-lg": ["Space Grotesk"], "label-md": ["Plus Jakarta Sans"], "headline-hero": ["Space Grotesk"], "label-caps": ["Space Grotesk"], "headline-hero-mobile": ["Space Grotesk"], "body-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-sm": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "title-md": ["Plus Jakarta Sans"] }, fontSize: { "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" }], "headline-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" }], "headline-hero-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "26px", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/70 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-28 flex flex-col justify-between px-margin-mobile pb-space-xs"><div class="flex items-center justify-between h-14"><div class="flex items-center gap-space-sm"><img alt="CineFlix Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VjZtfP-HRnlgFzaQxHWmYQutfTivVI_GnhsO4Ma3z4Go_it6M82GR09jWx8SJ8686UvldIEftQTJ3N9RaRa5oSWpEgdDxH8Pdti9hz3TWGgBfkKpxcrxFCg1mrT-S4mPL8wJNDy96PTzn4iXnEpualoLzAMrhGxpFITDLQ6EKJJLqAxS9Q790Xnoau-7X-c1Xoaw10solkMKoDCc20AIDrNeG9uxse3OyYRNTzqdBHcfcZAYh-G4t7ig"/><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">CineFlix</span><span class="sr-only">Home</span></div><div class="flex items-center gap-space-xs"><button aria-label="Cast to Screen" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface active:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[24px]">cast</span></button><button aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface active:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[24px]">search</span></button><a aria-label="Profile" class="w-11 h-11 flex items-center justify-center rounded-full" data-path="profile-more" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChYUkBlP8bz6e1z-w1vhcwPlTRpW01M28zcC2qjL11zFGi3qcD-p775aHR3P1AFQsww7XxKMrBDcyVEWDJeQnhqX03TFAqb6qmY7MGlYAYj6Mv0nwrMhxHrZnHfEgCmeqw3I2JXtm1j7iNDawcX0Wsr6qVDh3o-dAtR2nPnS5dZGu-1qJsXUSHmxN4ubMPJpg7xMrBtyz13vK093w5KrYSSQAAOWbcEgmJikWGUgIH_HEkZcd1giiC"/></a></div></div><div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-space-xs"><a class="flex-shrink-0 px-space-md py-space-xs rounded-full bg-surface-container-high/60 backdrop-blur-md text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-colors" data-path="series" href="#">Series</a><a class="flex-shrink-0 px-space-md py-space-xs rounded-full bg-surface-container-high/60 backdrop-blur-md text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-colors" data-path="films" href="#">Films</a><a class="flex-shrink-0 px-space-md py-space-xs rounded-full bg-surface-container-high/60 backdrop-blur-md text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-colors" data-path="categories" href="#">Categories</a><a class="flex-shrink-0 px-space-md py-space-xs rounded-full bg-surface-container-high/60 backdrop-blur-md text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-colors" data-path="my-list" href="#">My List</a></div></div></header><main class="flex flex-col relative w-full pt-28 pb-20 bg-surface"><div class="flex flex-col w-full text-on-surface select-none pb-12 overflow-hidden">
+<!-- Immersive Hero Showcase -->
+<section class="relative w-full aspect-[4/5] max-h-[580px] overflow-hidden">
+<!-- Cinematic Poster Media with Dark Gradient Scrims -->
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A striking futuristic sci-fi movie key visual featuring a lone astronaut gazing at an incandescent temporal vortex tearing through an obsidian starry nebula. Volumetric deep red and neon crimson beams illuminate the cinematic composition, captured with 70mm IMAX clarity, hyper-realistic reflections on the helmet visor, film grain, and high-contrast dramatic shadows." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB5rZsfLmgh4eJFGoeTffxYEbOr2G90qIhvYTYb0tx0YJcqJJfxPto7Sj2Urhqhw-CoJQcJw5XuZjUQsedb45OTMig8l5jSQVG0Lqwb5Yqzl0sftJhLWAMtF-HZ4oePxdYBJVf-8ZybNSYKdNRKXXup2MPsWTK17IWtFQ21lTPIn1CN_YhLKRrivoT9DZ_n9qlFmJEH2thB37JLNo7jOOp7D7EEEpjfr8kAo-DufNbl7moGW01_eZGW')"></div>
+<!-- Vignette scrims for fluid immersion -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-surface/80 via-transparent to-transparent"></div>
+<div class="absolute inset-0 bg-radial-at-c from-transparent via-transparent to-surface-container-lowest/60"></div>
+<!-- Top floating micro-pill for Ranking -->
+<div class="absolute top-4 left-4 flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container shadow-lg shadow-primary-container/30">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="font-label-caps text-label-caps tracking-wider uppercase">#1 in Movies Today</span>
+</div>
+<!-- Hero Content & Metadata -->
+<div class="absolute bottom-4 inset-x-0 px-4 flex flex-col items-center text-center">
+<!-- Title Graphic Identity -->
+<h1 class="font-headline-hero-mobile text-headline-hero-mobile tracking-tight uppercase text-on-surface drop-shadow-md">
+        Chrono<span class="text-primary-container">:</span>Zero
+      </h1>
+<!-- Genre & Tags -->
+<p class="mt-1 font-body-sm text-body-sm text-on-surface-variant flex items-center justify-center gap-2">
+<span>Sci-Fi</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span>Psychological Thriller</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span>Mind-Bending</span>
+</p>
+<!-- Spec Badges -->
+<div class="mt-3 flex items-center justify-center gap-2 flex-wrap">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest/80 text-on-surface font-label-caps text-label-caps tracking-wider backdrop-blur-md">4K ULTRA HD</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest/80 text-on-surface font-label-caps text-label-caps tracking-wider backdrop-blur-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">spatial_audio</span>
+<span>SPATIAL AUDIO</span>
+</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest/80 text-on-surface font-label-caps text-label-caps backdrop-blur-md">16+</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-container/40 text-tertiary font-label-caps text-label-caps backdrop-blur-md">99% MATCH</span>
+</div>
+<!-- Action Button Group -->
+<div class="mt-4 w-full flex items-center justify-center gap-3">
+<!-- Add to List -->
+<button aria-label="Add to My List" class="flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-surface-container-high/60 backdrop-blur-xl text-on-surface active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[24px]">add</span>
+<span class="font-label-caps text-label-caps tracking-wider uppercase mt-0.5">My List</span>
+</button>
+<!-- Primary Play Button -->
+<button aria-label="Play Chrono Zero" class="flex-[2] flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-on-surface text-surface active:scale-95 transition-transform shadow-xl shadow-surface-container-lowest/80" type="button">
+<span class="material-symbols-outlined text-[26px] text-primary-container" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+<span class="font-title-md text-title-md tracking-wide text-surface">Play</span>
+</button>
+<!-- Details Info -->
+<button aria-label="More Info" class="flex-1 flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-surface-container-high/60 backdrop-blur-xl text-on-surface active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[24px]">info</span>
+<span class="font-label-caps text-label-caps tracking-wider uppercase mt-0.5">Info</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Carousel 1: Trending Now with Bold Giant Numbers -->
+<section class="mt-8 flex flex-col w-full">
+<div class="px-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-4 bg-primary-container rounded-full"></span>
+<h2 class="font-headline-sm text-headline-sm tracking-tight text-on-surface">Top 10 Trending</h2>
+</div>
+<a class="font-label-md text-label-md text-secondary hover:text-on-surface flex items-center gap-0.5" href="#">
+<span>See All</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Scroller -->
+<div class="mt-3.5 flex gap-5 overflow-x-auto no-scrollbar pl-4 pr-6 pb-2">
+<!-- Rank 1 Card -->
+<div class="relative flex-shrink-0 flex items-end w-44 h-60">
+<!-- Massive Numeric Typography -->
+<span class="absolute -left-2 -bottom-3 text-[108px] font-headline-hero leading-none select-none text-surface-container-highest tracking-tighter z-0 drop-shadow-md">
+          1
+        </span>
+<!-- Poster Thumbnail -->
+<div class="relative ml-10 w-32 h-48 rounded-lg overflow-hidden bg-surface-container shadow-lg z-10">
+<img alt="Neon Syndicate Poster" class="w-full h-full object-cover" data-alt="Intense dystopian cyberpunk thriller poster art with a neon magenta and electric blue cityscape reflecting on rain-slicked asphalt, featuring a cybernetic detective facing away into heavy smog with crimson atmospheric lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAdY43WtEpJTsfMJc2LKZc7SYLStk9cpMCyIrpG_NuH1ILA5j1w_RQH3afHxBCsJw5tf7OMtBg8exqwfVOan9PapBltjQkkDc0jLQAVEUlLfwdYhksUuKQLW54k5BaUx7SnQWRbFfhHx9eq_hr1NmAV2k57f7ymC9r3zavIGwgKXPSimoVv_DwRMkD1VHd0kTN5uUgPNj6s_XDLCLabuqO8boSxe3dwksNYnj7XaJhMrVreoghJrJC"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent"></div>
+<div class="absolute top-1.5 right-1.5 px-1.5 py-0.5 rounded bg-primary-container text-on-primary-container font-label-caps text-label-caps">
+            TOP 1
+          </div>
+<p class="absolute bottom-2 inset-x-2 font-label-md text-label-md text-on-surface line-clamp-1">Neon Syndicate</p>
+</div>
+</div>
+<!-- Rank 2 Card -->
+<div class="relative flex-shrink-0 flex items-end w-44 h-60">
+<span class="absolute -left-2 -bottom-3 text-[108px] font-headline-hero leading-none select-none text-surface-container-highest tracking-tighter z-0 drop-shadow-md">
+          2
+        </span>
+<div class="relative ml-10 w-32 h-48 rounded-lg overflow-hidden bg-surface-container shadow-lg z-10">
+<img alt="Abyssal Abyss Poster" class="w-full h-full object-cover" data-alt="Cinematic fantasy horror poster showing an ancient obsidian cathedral submerged under deep glacial arctic waters, with luminous scarlet runes glowing beneath thick cracked ice and shadowy sea leviathans." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3yaZoHOjbIx3hNMF2T8DfekoNmMxjV02WbwBCGRnxU3Egp2w8v46als65qZjJvsfWl3jbgySON29ba2xbzff9jUO2SODPE4Rd5UXWJGBrjofmnltmlulXwSQpLp4pn92Gmt7FW-4GMjhPGkpEUmKr1qnZEejdfFf56E4HcdZcaz8niYk0tMXk8hevOqJWarOazsdzaA1b6udFXu0x-1qZppnvN4WOkWi91O6cyNdcaVGSo-8zwd3P"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent"></div>
+<div class="absolute top-1.5 right-1.5 px-1.5 py-0.5 rounded bg-primary-container text-on-primary-container font-label-caps text-label-caps">
+            TOP 2
+          </div>
+<p class="absolute bottom-2 inset-x-2 font-label-md text-label-md text-on-surface line-clamp-1">Abyssal Ruin</p>
+</div>
+</div>
+<!-- Rank 3 Card -->
+<div class="relative flex-shrink-0 flex items-end w-44 h-60">
+<span class="absolute -left-2 -bottom-3 text-[108px] font-headline-hero leading-none select-none text-surface-container-highest tracking-tighter z-0 drop-shadow-md">
+          3
+        </span>
+<div class="relative ml-10 w-32 h-48 rounded-lg overflow-hidden bg-surface-container shadow-lg z-10">
+<img alt="Apex Protocol Poster" class="w-full h-full object-cover" data-alt="Gritty heist drama film poster showing four masked figures sprinting away from an exploding armored transport under cinematic amber sunset flares, volumetric dark smoke, high-speed shutter aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuq9-GCeF3EwWIbs2MSvEE_mgSyL-JHdScevxlYH89tIRUuKbuXdi4s-ycg-ff5gOfna_os444dLe7qNIUuERhGmB0VXzIgZOG_laCiNh3bY7xYv_ickWcrGGdNhRphkRbQM_1TThbarL2ib2MAzNYz5r9E4z_vLYn1wRdHyoyFKZJhnIfrGBzshOG_qAC6cvu9OaF57mEP3PezsQu8wTF5a3WB1jquNx2uC4OyakBPf30VQsK5BMH"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent"></div>
+<div class="absolute top-1.5 right-1.5 px-1.5 py-0.5 rounded bg-primary-container text-on-primary-container font-label-caps text-label-caps">
+            TOP 3
+          </div>
+<p class="absolute bottom-2 inset-x-2 font-label-md text-label-md text-on-surface line-clamp-1">Apex Protocol</p>
+</div>
+</div>
+<!-- Rank 4 Card -->
+<div class="relative flex-shrink-0 flex items-end w-44 h-60">
+<span class="absolute -left-2 -bottom-3 text-[108px] font-headline-hero leading-none select-none text-surface-container-highest tracking-tighter z-0 drop-shadow-md">
+          4
+        </span>
+<div class="relative ml-10 w-32 h-48 rounded-lg overflow-hidden bg-surface-container shadow-lg z-10">
+<img alt="Solstice Drift Poster" class="w-full h-full object-cover" data-alt="Post-apocalyptic solar flare sci-fi movie poster featuring an overgrown abandoned brutalist city bathed in blinding crimson sunlight with dust motes and lone survivor with bow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8jFkWG0c1jj95ZlfsKjsiFMsoICMc_IsCqyVcIgdyJjBie8HrKZjVjmYQkleaKlPqdhb_p4bDnOsjbuvmof1aJB1KyqGaa7fIriGOvlxMzjG50imWKcrBhkSrl8JkwDZsxxtgkJX4hae6Xzprjoo5vPXy6zR86hAVo6t7WM5jNrMcBt0cq2q74zVq7K8VczV_Z3l_MDMCD3rW03ahvo-Pu8CH043AP6qwmgmZgLMcJp-TXC5H1n-j"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent"></div>
+<div class="absolute top-1.5 right-1.5 px-1.5 py-0.5 rounded bg-primary-container text-on-primary-container font-label-caps text-label-caps">
+            TOP 4
+          </div>
+<p class="absolute bottom-2 inset-x-2 font-label-md text-label-md text-on-surface line-clamp-1">Solstice Drift</p>
+</div>
+</div>
+<!-- Rank 5 Card -->
+<div class="relative flex-shrink-0 flex items-end w-44 h-60">
+<span class="absolute -left-2 -bottom-3 text-[108px] font-headline-hero leading-none select-none text-surface-container-highest tracking-tighter z-0 drop-shadow-md">
+          5
+        </span>
+<div class="relative ml-10 w-32 h-48 rounded-lg overflow-hidden bg-surface-container shadow-lg z-10">
+<img alt="The Haunting of Blackwood Poster" class="w-full h-full object-cover" data-alt="Eerie supernatural mystery poster showing an old Victorian manor with glowing scarlet stained-glass windows under a blood moon eclipse, mist crawling across the overgrown yard." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0eGIRemyE4On8TAXtWgGT1ri3st85f4HZ0ksX-kRoK5m4PhEYc_mJ-OEjvC9EleRDvqAdwb6gZcybtTwLAV8uEXTxGf2HayjCkebDz-OahEm_DmcVkZNYNTa16jwVwNZbbthhvuxYlzo3dBkKhb_sdDkqHC2NYE4GjhsbrR4KpIXmZm3tqtaCYP5Hra6lo3i15Wpbws1JcnKoLiGL6-fTAKYSdvfxvJrdBmyvq22TX-sEuFrCWB8_"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent"></div>
+<div class="absolute top-1.5 right-1.5 px-1.5 py-0.5 rounded bg-primary-container text-on-primary-container font-label-caps text-label-caps">
+            TOP 5
+          </div>
+<p class="absolute bottom-2 inset-x-2 font-label-md text-label-md text-on-surface line-clamp-1">Blackwood Manor</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Carousel 2: Continue Watching for Alex with Scrubber -->
+<section class="mt-8 flex flex-col w-full">
+<div class="px-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-caps text-label-caps">
+          A
+        </div>
+<h2 class="font-headline-sm text-headline-sm tracking-tight text-on-surface">Continue Watching</h2>
+</div>
+<span class="font-body-sm text-body-sm text-outline">3 in progress</span>
+</div>
+<!-- Scroller -->
+<div class="mt-3.5 flex gap-3.5 overflow-x-auto no-scrollbar pl-4 pr-6 pb-2">
+<!-- Item 1 -->
+<div class="flex-shrink-0 w-64 rounded-xl overflow-hidden bg-surface-container-low shadow-md">
+<!-- Thumbnail Container -->
+<div class="relative w-full aspect-video overflow-hidden">
+<img alt="Cold Cipher S2:E4" class="w-full h-full object-cover" data-alt="Wide cinematic 16:9 still from a prestige mystery drama showing an interrogation room dimly lit by an overhead lamp, casting dramatic shadows on two agents across a metallic table." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyDa9tzGxwL3LyiddLWzJZVfcqPgmIb7L35cGOA2cYhSFUMMoOGc0YcUdc0k4Gof1SEe7vBozWzi23uloPNemM2qPSCJWY3sm94aZSfiMKiZ7VMyaxhC2aF0nDorMk0ZBfHjOHElyqY2QGm6w6XuF8Ul7WIA4fjfl1L082p9467MDL7b7HFg2Z2hCXlg6M1DRJYR0_vBbR2X0GqnnuIPsefX64F9OFme47KIp9TILS5XYWx1gz9X6e"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<!-- Central Quick Play Trigger -->
+<button aria-label="Resume Episode" class="absolute inset-0 m-auto w-11 h-11 rounded-full bg-surface-container-lowest/70 backdrop-blur-md flex items-center justify-center text-on-surface hover:scale-110 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<!-- Scrubber Progress Bar at bottom of thumbnail -->
+<div class="absolute bottom-0 inset-x-0 h-1 bg-surface-variant">
+<div class="h-full bg-primary-container w-[72%]"></div>
+</div>
+</div>
+<!-- Meta & Contextual Controls -->
+<div class="p-3 flex items-center justify-between">
+<div class="min-w-0 pr-2">
+<h3 class="font-title-md text-title-md text-on-surface truncate">Cold Cipher</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+<span>S2:E4</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span>18m left</span>
+</p>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-1">
+<button aria-label="Download for offline" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface active:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+<button aria-label="Episode info" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface active:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex-shrink-0 w-64 rounded-xl overflow-hidden bg-surface-container-low shadow-md">
+<div class="relative w-full aspect-video overflow-hidden">
+<img alt="Event Horizon: Echoes S1:E8" class="w-full h-full object-cover" data-alt="Wide cinematic 16:9 shot of an armored deep-space exploratory cruiser gliding past the glowing rings of a purple gas giant in deep hyper-space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm7b0xcsyCljC35oGR2I2sug0kOZR4ueQ5oOJKYH803MvoO7Xtf7dnD0heqeVsp4B8xoeXeoX6o6MVj99L0gQkMSNFr5CRxFgbbrQqDafsd2HSAQ7NobSJhg8kWhBfMu7MYCxS5LiaursFMNWRzBJ7nQpIN0t8SIyrZI4RFD9wJi8WaWBCa8-BFHN-q7gKL2b7pSzLrFqfJBzguInz7n4WooV85eYjrWBhmZSY_DzeWWNrHcerVMtV"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<button aria-label="Resume Episode" class="absolute inset-0 m-auto w-11 h-11 rounded-full bg-surface-container-lowest/70 backdrop-blur-md flex items-center justify-center text-on-surface hover:scale-110 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<div class="absolute bottom-0 inset-x-0 h-1 bg-surface-variant">
+<div class="h-full bg-primary-container w-[45%]"></div>
+</div>
+</div>
+<div class="p-3 flex items-center justify-between">
+<div class="min-w-0 pr-2">
+<h3 class="font-title-md text-title-md text-on-surface truncate">Echoes of Titan</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+<span>S1:E8</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span>32m left</span>
+</p>
+</div>
+<div class="flex items-center gap-1">
+<button aria-label="Downloaded" class="w-9 h-9 rounded-full flex items-center justify-center text-primary hover:text-on-surface active:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</button>
+<button aria-label="Episode info" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface active:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex-shrink-0 w-64 rounded-xl overflow-hidden bg-surface-container-low shadow-md">
+<div class="relative w-full aspect-video overflow-hidden">
+<img alt="Redline Drift Film" class="w-full h-full object-cover" data-alt="Wide cinematic 16:9 still from a high-stakes competitive racing series featuring two tuned sports cars drifting through rain-slicked Tokyo highways at midnight with red tail-light trails." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8dNb0cBOdwqSzon9G_FJl9QRGDyvVaSQTue2MbG_CYZsnrbT7Sq95Hm_XlSDaTEqVplhPFHcNiCQm87n3MV9e1SiveW0y_AocNN-q9UWuNv5FYwtQPVm_AZ1q-WoM0BGa40B5uhGV5ylNUqieFfeUvu65T-FnJL-Sr30y7kqiXNE0wREgZR0wDA5zwjHNgSbmk-HoPKWWXj7EvmecfgQdwMnsoJy6-5jkCXkb1YKTEduFU8zTvEih"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<button aria-label="Resume Movie" class="absolute inset-0 m-auto w-11 h-11 rounded-full bg-surface-container-lowest/70 backdrop-blur-md flex items-center justify-center text-on-surface hover:scale-110 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<div class="absolute bottom-0 inset-x-0 h-1 bg-surface-variant">
+<div class="h-full bg-primary-container w-[89%]"></div>
+</div>
+</div>
+<div class="p-3 flex items-center justify-between">
+<div class="min-w-0 pr-2">
+<h3 class="font-title-md text-title-md text-on-surface truncate">Redline Shift</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+<span>Film</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span>11m left</span>
+</p>
+</div>
+<div class="flex items-center gap-1">
+<button aria-label="Download for offline" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface active:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+<button aria-label="Episode info" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface active:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Carousel 3: CineFlix Originals with Tall Cards & Award Laurels -->
+<section class="mt-8 flex flex-col w-full">
+<div class="px-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-pulse"></span>
+<h2 class="font-headline-sm text-headline-sm tracking-tight text-on-surface">CineFlix Originals</h2>
+</div>
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">Exclusive</span>
+</div>
+<!-- Scroller -->
+<div class="mt-3.5 flex gap-3.5 overflow-x-auto no-scrollbar pl-4 pr-6 pb-2">
+<!-- Original Card 1 -->
+<div class="relative flex-shrink-0 w-36 h-56 rounded-xl overflow-hidden bg-surface-container shadow-xl">
+<img alt="Kingdom of Ash" class="w-full h-full object-cover" data-alt="Vertical cinema poster for a medieval dark fantasy series, showcasing an obsidian crown resting on a throne of jagged crimson dragon glass, wrapped in dark thorny roots under moonlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT1SUjwEbA9PAwG-a9IrZuKpb_X28ZCWESR7QvTPvz15rnsSPFAmqPqyAaWTImIcRqW_K5NXjdODE_AgTcFOz7O26m_3XXch3PfxdVbx7T12dKbxbgDu1cr6lHv1XcTjb6ttehWoYRQRAFd0PMgsysaJSKaJ2k43a0cU2K33lupdDD3mE7z5XDzfl7YjFnzsg5J_WMORKfeZF43THDa7T1LRPJJxCRWZheCYf4XVchcJEXmh1RpuJG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<!-- CineFlix N-style badge -->
+<div class="absolute top-2 left-2 flex items-center gap-1">
+<div class="w-5 h-5 rounded bg-primary-container text-on-primary-container flex items-center justify-center font-headline-sm text-[12px] font-bold">
+            C
+          </div>
+</div>
+<!-- Laurel / Award Micro Badge -->
+<div class="absolute top-2 right-2 px-1.5 py-0.5 rounded-full bg-surface-container-highest/80 backdrop-blur-md flex items-center gap-0.5 text-tertiary">
+<span class="material-symbols-outlined text-[12px]">military_tech</span>
+<span class="font-label-caps text-[9px]">EMMY</span>
+</div>
+<div class="absolute bottom-2.5 inset-x-2.5">
+<p class="font-label-caps text-[10px] text-primary tracking-wider uppercase font-semibold">New Season</p>
+<h4 class="font-title-md text-label-lg text-on-surface line-clamp-1 leading-snug">Kingdom of Ash</h4>
+</div>
+</div>
+<!-- Original Card 2 -->
+<div class="relative flex-shrink-0 w-36 h-56 rounded-xl overflow-hidden bg-surface-container shadow-xl">
+<img alt="Sector 9" class="w-full h-full object-cover" data-alt="Vertical cinema poster for a neo-noir detective thriller set in 2085, featuring a female private investigator in a trench coat silhouetted in torrential rain under flickering red holographic advertisements." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDumnVrlox-92LRoG2le7292rMVlGcX0orWNNGdMsZXRTCEDVzP4XVbucwC47nmk4LU2mGd24mpLMHYhToQIIYFNXUbf4Zx2O0vDTyT6G9ew3NCqrVTzqgPf5D6u1k5j8dEBmVdSou7VjbIYm2aJKvx2IaEYfjzjjeYuDgLWDbC6K5nmXm9F_tSqJo8fEyOr2x391vSuYFS3LI5UKz09XpuZDQeM1Gh5hATfRyNB0bxpfQYY4omRZ_E"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 flex items-center gap-1">
+<div class="w-5 h-5 rounded bg-primary-container text-on-primary-container flex items-center justify-center font-headline-sm text-[12px] font-bold">
+            C
+          </div>
+</div>
+<div class="absolute top-2 right-2 px-1.5 py-0.5 rounded-full bg-surface-container-highest/80 backdrop-blur-md flex items-center gap-0.5 text-tertiary">
+<span class="material-symbols-outlined text-[12px]">award_star</span>
+<span class="font-label-caps text-[9px]">TOP 10</span>
+</div>
+<div class="absolute bottom-2.5 inset-x-2.5">
+<p class="font-label-caps text-[10px] text-primary tracking-wider uppercase font-semibold">Limited Series</p>
+<h4 class="font-title-md text-label-lg text-on-surface line-clamp-1 leading-snug">Sector 9</h4>
+</div>
+</div>
+<!-- Original Card 3 -->
+<div class="relative flex-shrink-0 w-36 h-56 rounded-xl overflow-hidden bg-surface-container shadow-xl">
+<img alt="Silent Trench" class="w-full h-full object-cover" data-alt="Vertical cinema poster for an expansive underwater survival documentary, featuring bioluminescent deep sea jellyfish pulsing in an endless dark sapphire abyss with crimson hydrothermal vents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqjBwCiaJMwVFSRtWkfSBbeBg3PleJxWLNTbVU3m3X6cLxgO7eP9ogSd3i_y43U3TBAfDbf1joufgm_mxurrZzjBZDRuXWV-oR5NHA4nVTmyuwcEoHs-ibJfWmUtoDXx-W5uHqp5kWsyugm5LnSo3IEpTxBmQJgntrUoAS3wHq01Y4d4UM8y0nuI2pQ3TJB6hH2oxi5ug4gg9jezXiTj8Srp-BnEtcvfWPFI0vo2_jIZpeUlVZ3ahP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 flex items-center gap-1">
+<div class="w-5 h-5 rounded bg-primary-container text-on-primary-container flex items-center justify-center font-headline-sm text-[12px] font-bold">
+            C
+          </div>
+</div>
+<div class="absolute top-2 right-2 px-1.5 py-0.5 rounded-full bg-surface-container-highest/80 backdrop-blur-md flex items-center gap-0.5 text-tertiary">
+<span class="material-symbols-outlined text-[12px]">military_tech</span>
+<span class="font-label-caps text-[9px]">BAFTA</span>
+</div>
+<div class="absolute bottom-2.5 inset-x-2.5">
+<p class="font-label-caps text-[10px] text-primary tracking-wider uppercase font-semibold">Docuseries</p>
+<h4 class="font-title-md text-label-lg text-on-surface line-clamp-1 leading-snug">Silent Trench</h4>
+</div>
+</div>
+<!-- Original Card 4 -->
+<div class="relative flex-shrink-0 w-36 h-56 rounded-xl overflow-hidden bg-surface-container shadow-xl">
+<img alt="Parallax" class="w-full h-full object-cover" data-alt="Vertical cinema poster for a psychological space mystery with two astronauts floating upside down inside a mirrored crystalline space station orbiting a crimson red dying star." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNCkLTEZEsbTJhRT45DXG6syv50LK5Bfa4yCoG_bOYamRTcLzdI5xhGILDtAhf_TouLPdrsYhFpkgSSE3Hr9K7QXAiCcO8FoCdc1efmFMgrC464o1Qq4xixzq4SHhd1wSCcwZyDMF2M6W4OOCR7ykJz9jpd63NqkUgVuoFpp1_eEHNCPb9WHPfxD6zg9_4jcIQAwFUmVyR8qEI1oFPqA6_tXGCGmHnTXks1w240TdvqQI5dPyKt-LJ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute top-2 left-2 flex items-center gap-1">
+<div class="w-5 h-5 rounded bg-primary-container text-on-primary-container flex items-center justify-center font-headline-sm text-[12px] font-bold">
+            C
+          </div>
+</div>
+<div class="absolute bottom-2.5 inset-x-2.5">
+<p class="font-label-caps text-[10px] text-primary tracking-wider uppercase font-semibold">New Release</p>
+<h4 class="font-title-md text-label-lg text-on-surface line-clamp-1 leading-snug">Parallax</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Carousel 4: Top Picks in Sci-Fi & Cyberpunk with Match Scores -->
+<section class="mt-8 flex flex-col w-full">
+<div class="px-4 flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm tracking-tight text-on-surface">Sci-Fi &amp; Cyberpunk</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Curated for your late-night thrills</p>
+</div>
+<a class="font-label-md text-label-md text-secondary hover:text-on-surface flex items-center gap-0.5" href="#">
+<span>Explore</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Scroller -->
+<div class="mt-3.5 flex gap-3 overflow-x-auto no-scrollbar pl-4 pr-6 pb-2">
+<!-- Card 1 -->
+<div class="flex-shrink-0 w-40 flex flex-col">
+<div class="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-surface-container shadow-md">
+<img alt="Synthetic Soul" class="w-full h-full object-cover" data-alt="Vertical cinema poster of an android face with hyper-intricate exposed fiber-optic nerves glowing in intense crimson and teal, captured in hyper-detailed macro studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhHAqe3rJwX5DUJDaB78-ajJf6rsykMXGpXXMJl0Js4C9easoVfyDRfxc6gBaP_xHj8cDvHDKGnLhYU7MgFoBCQGkdiOwQgdw7mIwl-H4_oCMkaBzHZFwtpNqIM-k77N35APyTGLm04zJPvJN2eOyooWvO0Yr382FAHXt-Lv9HRVIa1FLTy26zZpKwS0hG0UliVq07j0an0XhvqXCw1Zx5mS9y3f-7qVlUHV2e45Fbaa_G4BaaIJgy"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
+<!-- Match Pill -->
+<div class="absolute bottom-2 left-2 px-1.5 py-0.5 rounded bg-tertiary-container/90 text-on-tertiary-container font-label-caps text-[10px] backdrop-blur-md">
+            98% Match
+          </div>
+<div class="absolute top-2 right-2 px-1 py-0.5 rounded bg-surface-container-lowest/80 text-on-surface font-label-caps text-[9px] backdrop-blur-md">
+            4K
+          </div>
+</div>
+<div class="mt-2">
+<h4 class="font-title-md text-body-md text-on-surface truncate font-semibold">Synthetic Soul</h4>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-body-sm text-[11px] text-outline">2h 14m</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Cyberpunk</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex-shrink-0 w-40 flex flex-col">
+<div class="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-surface-container shadow-md">
+<img alt="Hypershift" class="w-full h-full object-cover" data-alt="Vertical cinema poster showing a massive space dreadnought engaging its hyperspace drive, distorting starlight into brilliant linear streaks of crimson and blinding white." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqIFao7iPKv3ttWA9YBPd735KJxJ13EQe68PsyQ_XeFNJzsgoiOKQ1l_DCjzEyLPXsngLliJ34RmpnFihJhSMpE-QpwkTzCKlEe5q_43Rl9IMELUeXvbvxOaCuKRnRo2CjBofwgOwTfYxnfVqO_DQCN_IFs5hJQlG6UQQmNglwq8mQhJVKr02xwJ3x_1DulZHu8kDx0n5kVlf9ToAwvEoB8i--QqG5M6CyxRCBzhPXIrLFWQJH_LbP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 px-1.5 py-0.5 rounded bg-tertiary-container/90 text-on-tertiary-container font-label-caps text-[10px] backdrop-blur-md">
+            96% Match
+          </div>
+<div class="absolute top-2 right-2 px-1 py-0.5 rounded bg-surface-container-lowest/80 text-on-surface font-label-caps text-[9px] backdrop-blur-md">
+            HDR
+          </div>
+</div>
+<div class="mt-2">
+<h4 class="font-title-md text-body-md text-on-surface truncate font-semibold">Hypershift</h4>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-body-sm text-[11px] text-outline">1h 52m</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Space Opera</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex-shrink-0 w-40 flex flex-col">
+<div class="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-surface-container shadow-md">
+<img alt="Ghost Signal" class="w-full h-full object-cover" data-alt="Vertical cinematic movie poster of a dark room with a holographic globe displaying tactical data in glowing red wireframes, silhouetted rogue hacker from behind." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWPuxLLhqGGHANxcUXRSVjpfvrj9MJAPTCeogWpCbN6zcEx4if8WiFWeLg1g0RoG7YWLbqGeO0ZEfC3j3uf4blomA8SRVUu3UTX5x1uJDbg7YDMJC09hw8A9fAK3NW4GTkuYDdKCUwUpye3p3i1C_UphOKCXqgQCBq5gK0RBeGIS-i3eUk-SuPZtRdKANSpXr6TpIvOCCL0wGw3CBG6dXdreKHWSYF7pBMDBoraEnDr_Y9j4kNNtMp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 px-1.5 py-0.5 rounded bg-tertiary-container/90 text-on-tertiary-container font-label-caps text-[10px] backdrop-blur-md">
+            94% Match
+          </div>
+<div class="absolute top-2 right-2 px-1 py-0.5 rounded bg-surface-container-lowest/80 text-on-surface font-label-caps text-[9px] backdrop-blur-md">
+            5.1
+          </div>
+</div>
+<div class="mt-2">
+<h4 class="font-title-md text-body-md text-on-surface truncate font-semibold">Ghost Signal</h4>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-body-sm text-[11px] text-outline">2h 05m</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Techno-Thriller</span>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="flex-shrink-0 w-40 flex flex-col">
+<div class="relative w-full aspect-[2/3] rounded-lg overflow-hidden bg-surface-container shadow-md">
+<img alt="Luna Dark" class="w-full h-full object-cover" data-alt="Vertical cinema poster of a futuristic lunar mining colony with illuminated industrial cranes casting dramatic crimson shadows onto grey moon craters, Earth visible in the black sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXWr0YXhkS0OunZbXEQdbd3s7ftsegS46FXAtIwW8eA5CL1b4S5BNfCX-TC1cy3-mOW4PqslkKa1YeCwExyc-8ogwYviJ4Azt_qYIYQDkUtjnDWnt4XKVRJTe1Ld3Rg-V1PSkPkWJuaEBk9APNlXUCv6ZznlGgMrlXd_WvoPCntDjMpIetVq9f5_6ZdfF72jiIF-xMS0-243sFPY_ZtL3_ndyH9gohXsT2p9Zv3WgMvdnyG4ouuo2H"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 px-1.5 py-0.5 rounded bg-tertiary-container/90 text-on-tertiary-container font-label-caps text-[10px] backdrop-blur-md">
+            91% Match
+          </div>
+<div class="absolute top-2 right-2 px-1 py-0.5 rounded bg-surface-container-lowest/80 text-on-surface font-label-caps text-[9px] backdrop-blur-md">
+            4K
+          </div>
+</div>
+<div class="mt-2">
+<h4 class="font-title-md text-body-md text-on-surface truncate font-semibold">Luna Dark</h4>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-body-sm text-[11px] text-outline">1h 48m</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Hard Sci-Fi</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Quick Category Selector Pills -->
+<section class="mt-8 px-4 flex flex-col w-full">
+<div class="flex items-center justify-between mb-3">
+<h2 class="font-headline-sm text-headline-sm tracking-tight text-on-surface">Browse by Mood</h2>
+<span class="material-symbols-outlined text-outline text-[20px]">tune</span>
+</div>
+<div class="grid grid-cols-2 gap-2.5">
+<button class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-high/60 backdrop-blur-md text-left active:scale-[0.98] transition-transform" type="button">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary-container text-[22px]">rocket_launch</span>
+<span class="font-label-lg text-label-lg text-on-surface">Adrenaline &amp; Action</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+</button>
+<button class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-high/60 backdrop-blur-md text-left active:scale-[0.98] transition-transform" type="button">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[22px]">psychology</span>
+<span class="font-label-lg text-label-lg text-on-surface">Mind Twisters</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+</button>
+<button class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-high/60 backdrop-blur-md text-left active:scale-[0.98] transition-transform" type="button">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[22px]">nightlight</span>
+<span class="font-label-lg text-label-lg text-on-surface">Midnight Horrors</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+</button>
+<button class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-high/60 backdrop-blur-md text-left active:scale-[0.98] transition-transform" type="button">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-outline text-[22px]">theater_comedy</span>
+<span class="font-label-lg text-label-lg text-on-surface">Award Winners</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+</button>
+</div>
+</section>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-primary-container"><div class="h-16 flex items-center justify-around px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-1 transition-colors text-primary-container" data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-caps text-label-caps">Home</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="new-&amp;-hot" href="#"><span class="material-symbols-outlined text-[24px]">local_fire_department</span><span class="font-label-caps text-label-caps">New &amp; Hot</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="downloads" href="#"><span class="material-symbols-outlined text-[24px]">download_for_offline</span><span class="font-label-caps text-label-caps">Downloads</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="profile-more" href="#"><span class="material-symbols-outlined text-[24px]">manage_accounts</span><span class="font-label-caps text-label-caps">Profile</span></a></div></nav></body></html>

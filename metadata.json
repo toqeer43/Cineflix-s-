@@ -1,0 +1,6 @@
+{
+  "name": "CineFlix - Cinematic Streaming Experience",
+  "description": "Immersive 4K HDR cinema streaming platform featuring trending titles, original series, personalized watchlists, and theater-grade playback.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

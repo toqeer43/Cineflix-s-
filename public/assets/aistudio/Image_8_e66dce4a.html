@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_blank" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#131315;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary": "#ffb4aa", "tertiary-container": "#996900", "error-container": "#93000a", "inverse-on-surface": "#313032", "outline": "#af8782", "surface-bright": "#39393b", "surface-container-highest": "#353437", "on-background": "#e5e1e4", "secondary-fixed": "#ffdad7", "secondary-container": "#a00216", "tertiary-fixed": "#ffdeae", "primary-fixed-dim": "#ffb4aa", "surface-variant": "#353437", "tertiary-fixed-dim": "#ffba3e", "on-tertiary-fixed-variant": "#604100", "on-tertiary-fixed": "#281900", "surface-container-low": "#1c1b1e", "primary-container": "#e50914", "on-secondary": "#68000a", "on-primary-container": "#fff7f6", "inverse-primary": "#c0000c", "primary-fixed": "#ffdad5", "background": "#131315", "surface": "#131315", "surface-container": "#201f22", "surface-dim": "#131315", "on-secondary-fixed": "#410004", "secondary": "#ffb3ad", "secondary-fixed-dim": "#ffb3ad", "surface-container-lowest": "#0e0e10", "on-error": "#690005", "on-primary-fixed-variant": "#930007", "on-secondary-fixed-variant": "#930012", "error": "#ffb4ab", "on-surface-variant": "#e9bcb6", "on-tertiary": "#432c00", "on-primary-fixed": "#410001", "tertiary": "#ffba3e", "on-secondary-container": "#ffa9a2", "outline-variant": "#5e3f3b", "surface-tint": "#ffb4aa", "on-tertiary-container": "#fff7f2", "on-surface": "#e5e1e4", "surface-container-high": "#2a2a2c", "inverse-surface": "#e5e1e4", "on-primary": "#690003", "on-error-container": "#ffdad6" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "space-sm": "0.5rem", "gutter": "1.5rem", "space-lg": "1.5rem", "space-2xl": "4rem", "space-xl": "2.5rem", "margin-mobile": "1rem", "margin-tv": "4rem", "gutter-tv": "2.5rem", "space-md": "1rem", "gutter-mobile": "0.75rem", "margin": "3rem" }, fontFamily: { "body-lg": ["Plus Jakarta Sans"], "headline-lg": ["Space Grotesk"], "label-md": ["Plus Jakarta Sans"], "headline-hero": ["Space Grotesk"], "label-caps": ["Space Grotesk"], "headline-hero-mobile": ["Space Grotesk"], "body-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-sm": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "title-md": ["Plus Jakarta Sans"] }, fontSize: { "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" }], "headline-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" }], "headline-hero-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "26px", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface pt-safe pb-safe min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container"><main class="flex flex-col relative w-full bg-surface min-h-screen"><div class="flex flex-col w-full relative select-none overflow-hidden" id="player-container">
+<!-- Cinematic Background Freeze-Frame with dynamic theater lighting scrim -->
+<div class="relative w-full aspect-[9/16] max-h-[820px] overflow-hidden bg-surface-container-lowest flex flex-col justify-between" id="viewport-stage">
+<!-- Video Visual Frame Layer -->
+<div class="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-700 ease-out scale-100" data-alt="Cinematic still from sci-fi film CHRONO ZERO. A silhouetted space pilot in an obsidian helmet stands before a monumental glowing crimson temporal singularity wormhole. Volumetric amber smoke, deep obsidian shadows, cinematic grain, 35mm anamorphic aspect ratio, rim lighting in rich fiery red and atmospheric cyan embers." id="video-frame" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA6RxcVcEyu9UkCwbhzG9TxSDkfGsW_lNGFPjzMLRAT8HahmYkWOKyw5zg1k1r6eBzNilO9u_zgZoqmKwhDbBPv1pgF7OcfOnWqjNKgmkKUG0bAXhmja1QfYisOsdPfT93FB_VzkOCD3B11g0iU2m_edb96yrIOxkF7qRXD8RGpekVTPXACOd5uBAsXZ3r2FKPUyjxJWE_5yFOV9_EIPyZkLe6jGu4m86FDiRmjCUpCLoaCD-UfhXeg')">
+</div>
+<!-- Multi-stage Theater Vignette Gradients -->
+<div class="absolute inset-0 bg-gradient-to-t from-[#08080A] via-[#08080A]/40 to-[#08080A]/80 pointer-events-none"></div>
+<div class="absolute inset-0 bg-radial from-transparent via-[#08080A]/30 to-[#08080A]/90 pointer-events-none"></div>
+<!-- TOP BAR: Navigation, Metadata, Device & Audio Routing -->
+<header class="relative z-20 flex flex-col pt-4 px-4 gap-2">
+<div class="flex items-center justify-between">
+<!-- Back Navigation & Title Group -->
+<div class="flex items-center gap-3 min-w-0">
+<button aria-label="Exit Player" class="w-10 h-10 rounded-full bg-surface-container/60 backdrop-blur-md flex items-center justify-center text-on-surface active:scale-90 active:bg-surface-bright transition-all" type="button">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight truncate">CHRONO: ZERO</span>
+<span class="bg-primary-container text-on-primary-container font-label-caps text-label-caps px-1.5 py-0.5 rounded tracking-wider uppercase">4K HDR</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">S1 : E4 • Paradox Horizon</span>
+</div>
+</div>
+<!-- Audio Spec & Cast Actions -->
+<div class="flex items-center gap-2 flex-shrink-0">
+<button aria-label="Subtitles CC" class="h-9 px-2.5 rounded-full bg-surface-container/70 backdrop-blur-md flex items-center gap-1 text-on-surface active:scale-95 transition-all" id="cc-btn" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">closed_caption</span>
+<span class="font-label-caps text-label-caps font-bold text-on-surface">CC</span>
+</button>
+<button aria-label="Cast to TV" class="w-9 h-9 rounded-full bg-surface-container/70 backdrop-blur-md flex items-center justify-center text-on-surface active:scale-90 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">cast</span>
+</button>
+</div>
+</div>
+<!-- Quick Audio Status Banner Pill -->
+<div class="self-start mt-1">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low/80 backdrop-blur-md">
+<span class="material-symbols-outlined text-[14px] text-primary">surround_sound</span>
+<span class="font-label-md text-label-md text-on-surface-variant truncate max-w-[240px]">English [Original] • Dolby Atmos 5.1</span>
+</div>
+</div>
+</header>
+<!-- CENTER CONTROLS: Scrub Skip & Play/Pause Pulse Button -->
+<main class="relative z-20 flex items-center justify-center gap-8 my-auto px-4">
+<!-- Skip Backward 10s -->
+<div class="flex flex-col items-center gap-1">
+<button aria-label="Rewind 10 seconds" class="w-14 h-14 rounded-full bg-surface-container/60 backdrop-blur-md flex items-center justify-center text-on-surface active:scale-85 active:bg-surface-container-high transition-transform duration-150" id="btn-rewind" type="button">
+<span class="material-symbols-outlined text-[32px]">replay_10</span>
+</button>
+<span class="font-label-caps text-label-caps text-on-surface-variant">-10s</span>
+</div>
+<!-- Hero Play / Pause Floating Crystal Button -->
+<div class="relative flex items-center justify-center">
+<!-- Crimson Ambient Aura Pulse -->
+<div class="absolute inset-0 rounded-full bg-primary-container/30 blur-2xl animate-pulse"></div>
+<button aria-label="Play or Pause" class="relative w-20 h-20 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-xl active:scale-95 transition-transform duration-200" id="btn-play-pause" type="button">
+<span class="material-symbols-outlined text-[42px]" id="play-pause-icon" style="font-variation-settings: 'FILL' 1;">pause</span>
+</button>
+</div>
+<!-- Skip Forward 10s -->
+<div class="flex flex-col items-center gap-1">
+<button aria-label="Forward 10 seconds" class="w-14 h-14 rounded-full bg-surface-container/60 backdrop-blur-md flex items-center justify-center text-on-surface active:scale-85 active:bg-surface-container-high transition-transform duration-150" id="btn-forward" type="button">
+<span class="material-symbols-outlined text-[32px]">forward_10</span>
+</button>
+<span class="font-label-caps text-label-caps text-on-surface-variant">+10s</span>
+</div>
+</main>
+<!-- BOTTOM DECK: Scrubber, Timestamps & Primary Playback Controls -->
+<footer class="relative z-20 flex flex-col px-4 pb-5 gap-3 bg-gradient-to-t from-[#08080A] via-[#08080A]/90 to-transparent pt-6">
+<!-- Timeline Scrubber Container -->
+<div class="flex flex-col gap-1.5 w-full">
+<!-- Interactive Scrubbing Bar -->
+<div class="relative w-full h-7 flex items-center cursor-pointer group" id="scrubber-rail">
+<!-- Total Track Background -->
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest relative overflow-hidden">
+<!-- Buffered Track -->
+<div class="absolute left-0 top-0 bottom-0 w-[68%] bg-surface-bright rounded-full"></div>
+<!-- Played Elapsed Track (Crimson) -->
+<div class="absolute left-0 top-0 bottom-0 w-[30.7%] bg-primary-container rounded-full" id="scrubber-fill"></div>
+</div>
+<!-- Tactile Glowing Scrub Head Pointer -->
+<div class="absolute left-[30.7%] -translate-x-1/2 w-4 h-4 rounded-full bg-on-primary-container shadow-md flex items-center justify-center transition-transform group-active:scale-125" id="scrub-thumb">
+<div class="w-1.5 h-1.5 rounded-full bg-primary-container"></div>
+</div>
+</div>
+<!-- Timestamps Row -->
+<div class="flex items-center justify-between w-full">
+<span class="font-label-md text-label-md text-on-surface tracking-wider font-semibold" id="time-elapsed">42:15</span>
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-md text-label-md text-on-surface-variant tracking-wider" id="time-remaining">-1:35:45</span>
+</div>
+</div>
+</div>
+<!-- Horizontal Utility Controls Row -->
+<div class="flex items-center justify-between pt-1">
+<!-- Episodes Drawer Trigger -->
+<button class="flex flex-col items-center gap-1 active:scale-95 transition-transform text-on-surface" type="button">
+<div class="w-10 h-10 rounded-full bg-surface-container/60 backdrop-blur-md flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">video_library</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Episodes</span>
+</button>
+<!-- Audio & Subtitles Panel Trigger -->
+<button class="flex flex-col items-center gap-1 active:scale-95 transition-transform text-on-surface" type="button">
+<div class="w-10 h-10 rounded-full bg-surface-container/60 backdrop-blur-md flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">subtitles</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Audio &amp; Sub</span>
+</button>
+<!-- Playback Rate Pill Selector -->
+<button class="flex flex-col items-center gap-1 active:scale-95 transition-transform text-on-surface" id="btn-speed" type="button">
+<div class="w-10 h-10 rounded-full bg-surface-container/60 backdrop-blur-md flex items-center justify-center">
+<span class="font-headline-sm text-[13px] font-bold text-primary">1.0x</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Speed</span>
+</button>
+<!-- Screen Lock Feature -->
+<button class="flex flex-col items-center gap-1 active:scale-95 transition-transform text-on-surface" id="btn-lock" type="button">
+<div class="w-10 h-10 rounded-full bg-surface-container/60 backdrop-blur-md flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">lock_open</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Lock</span>
+</button>
+<!-- Instant Skip to Next Episode -->
+<button class="flex flex-col items-center gap-1 active:scale-95 transition-transform text-on-surface" type="button">
+<div class="w-10 h-10 rounded-full bg-surface-container/60 backdrop-blur-md flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">skip_next</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Next Ep</span>
+</button>
+</div>
+</footer>
+<!-- Overlay Toast Notification on Actions -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 py-2 rounded-full bg-surface-container-highest/90 text-on-surface font-label-md text-label-md flex items-center gap-2 pointer-events-none opacity-0 scale-90 transition-all duration-200 z-50" id="player-toast">
+<span class="material-symbols-outlined text-[18px] text-primary" id="toast-icon">fast_forward</span>
+<span id="toast-text">+10 seconds</span>
+</div>
+</div>
+<!-- Bottom Sheet / Drawer Preview: Up Next in Series -->
+<section class="flex flex-col px-4 py-5 gap-3 bg-surface-container-lowest">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Up Next</span>
+<span class="font-label-caps text-label-caps text-primary tracking-wider uppercase">Auto-play ON</span>
+</div>
+<!-- Next Episode Card -->
+<div class="flex items-center gap-3 p-2.5 rounded-xl bg-surface-container-low active:bg-surface-container transition-colors">
+<div class="relative w-28 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-high">
+<div class="w-full h-full bg-cover bg-center" data-alt="Futuristic sci-fi corridor bathed in intense neon red alerts and cinematic smoke with two astronauts running toward a starship blast door. Wide angle, crisp 4K detail, high contrast." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdV82etG1-VT8Y6LjShHC4Rl7BF-_P4WSqQYGsd7OvMGAwdRRrFSGETEW2OrTp0JXqB3uU_bCyM5SUL_pYvW0eXSmHe4YfTnPkaB7XSrBRV6ZfO2o4k21g-ZUf-A9avoyRwMgtKGerSkGeIzMk23qyykKI_EinbA-5hP4S4htLhWIWfDWVBnEc38r5WQKnVdbeYga2xWtf5_H_cCZCd6Ia5e9bSYFQ2EkJdPE5oYGaLqPKh2iWt7S6')">
+</div>
+<div class="absolute inset-0 bg-[#08080A]/30 flex items-center justify-center">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col min-w-0 justify-center">
+<span class="font-label-caps text-label-caps text-tertiary">EPISODE 5</span>
+<span class="font-headline-sm text-body-md font-semibold text-on-surface truncate">The Entropy Threshold</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">54m • Audio Description Available</span>
+</div>
+</div>
+</section>
+</div>
+<script>
+  (function() {
+    let isPlaying = true;
+    let isLocked = false;
+    let speedIndex = 0;
+    const speeds = ['1.0x', '1.25x', '1.5x', '0.75x'];
+
+    const playPauseBtn = document.getElementById('btn-play-pause');
+    const playPauseIcon = document.getElementById('play-pause-icon');
+    const btnRewind = document.getElementById('btn-rewind');
+    const btnForward = document.getElementById('btn-forward');
+    const btnSpeed = document.getElementById('btn-speed');
+    const btnLock = document.getElementById('btn-lock');
+    const toast = document.getElementById('player-toast');
+    const toastIcon = document.getElementById('toast-icon');
+    const toastText = document.getElementById('toast-text');
+
+    function showToast(icon, text) {
+      if (!toast) return;
+      toastIcon.textContent = icon;
+      toastText.textContent = text;
+      toast.classList.remove('opacity-0', 'scale-90');
+      toast.classList.add('opacity-100', 'scale-100');
+      clearTimeout(window.__toastTimeout);
+      window.__toastTimeout = setTimeout(() => {
+        toast.classList.remove('opacity-100', 'scale-100');
+        toast.classList.add('opacity-0', 'scale-90');
+      }, 1000);
+    }
+
+    if (playPauseBtn) {
+      playPauseBtn.addEventListener('click', () => {
+        isPlaying = !isPlaying;
+        playPauseIcon.textContent = isPlaying ? 'pause' : 'play_arrow';
+        showToast(isPlaying ? 'play_arrow' : 'pause', isPlaying ? 'Resumed' : 'Paused');
+      });
+    }
+
+    if (btnRewind) {
+      btnRewind.addEventListener('click', () => {
+        showToast('replay_10', '10s Rewind');
+      });
+    }
+
+    if (btnForward) {
+      btnForward.addEventListener('click', () => {
+        showToast('forward_10', '10s Forward');
+      });
+    }
+
+    if (btnSpeed) {
+      btnSpeed.addEventListener('click', () => {
+        speedIndex = (speedIndex + 1) % speeds.length;
+        const speedTextEl = btnSpeed.querySelector('.font-headline-sm');
+        if (speedTextEl) speedTextEl.textContent = speeds[speedIndex];
+        showToast('speed', `Playback: ${speeds[speedIndex]}`);
+      });
+    }
+
+    if (btnLock) {
+      btnLock.addEventListener('click', () => {
+        isLocked = !isLocked;
+        const iconEl = btnLock.querySelector('.material-symbols-outlined');
+        if (iconEl) iconEl.textContent = isLocked ? 'lock' : 'lock_open';
+        showToast(isLocked ? 'lock' : 'lock_open', isLocked ? 'Screen Locked' : 'Screen Unlocked');
+      });
+    }
+  })();
+</script></main></body></html>
